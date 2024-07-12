@@ -1,0 +1,11 @@
+package types
+
+import (
+	"context"
+	"kitchen/services/common/genproto/orders"
+)
+
+type OrderService interface {
+	CreateOrder( context.Context, *orders.Order) error
+	GetOrder( context.Context)  []*orders.Order 
+}
